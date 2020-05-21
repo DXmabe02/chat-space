@@ -18,3 +18,12 @@
 - belongs_to :user
 - has_many :groups_maessages
 - has_many  :maessages,  through:  :groups_maessages
+
+## groups_maessagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false, foreign_key: true|
+|maessage_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :maessage
