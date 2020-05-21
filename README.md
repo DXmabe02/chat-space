@@ -2,9 +2,9 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
 ### Association
 - has_many :groups
 - has_many :messages
@@ -13,7 +13,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :users
 - has_many :maessages
