@@ -13,9 +13,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |groupname|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
-- has_many :groups_maessages
-- has_many  :maessages,  through:  :groups_maessages
+- has_many :users
+- has_many :maessages
+- has_many  :users,  through:  :users_groups
 
