@@ -1,0 +1,52 @@
+.side-bar {
+  background-color: #2f3e51;
+  width: 300px;
+  .header-left{
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    &__box {
+      height: 20px;
+      width: 260px;
+      background-color: #253141;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 20px;
+      &__name{
+        color: white;
+      }
+      &__icom{
+        background-color: #253141;
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        &__group{
+          margin-right: 5px;
+          a{
+            color: white;
+          }
+        }
+        &__account{
+          a{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .group{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+  }
+}
+
+
+
+
+
+
+
+
+
