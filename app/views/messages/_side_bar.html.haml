@@ -1,7 +1,8 @@
 .side-bar
   .header-left
     .header-left__box
-      %p.header-left__box__name masa
+      %p.header-left__box__name
+        masa
       %ul.header-left__box__icom
         %li.header-left__box__icom__group
           =link_to "#" do
@@ -9,4 +10,9 @@
         %li.header-left__box__icom__account
           =link_to "#" do
             =icon('fas', 'cog')
-  .group
+  .groups
+    =link_to "#", class:"group" do
+      %p.group__name
+        masa
+      %p.group__message
+        まだメッセージはありません
