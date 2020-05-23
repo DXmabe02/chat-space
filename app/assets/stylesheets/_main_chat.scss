@@ -1,19 +1,54 @@
 .chat-main{
   background-color: #fafafa;
   width: calc(100% - 300px);
+  .main-header{
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #eeeeee;
+    overflow: scroll;
+    padding: 0 40px;
+    &__left-bok{
+      margin-top: 35px;
+      h2{
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 15px;
+      }
+      &__menber-lis{
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+        li{
+          display: list-item;
+          text-align: -webkit-match-parent;
+        }
+      }
+    }
+    &__edit-btn{
+      color: #38aef0;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+      text-decoration: none;
+    }
+  }
+  .messages{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+  }
+  .form{
+    background-color: #d2d2d2;
+    height: 90px;
+  }
+  
 }
 
-.header-main{
-  height: 100px;
-  background-color: #ffffff;
-}
 
-.messages{
-  background-color: #fafafa;
-  height: calc(100vh - 190px);
-}
 
-.form{
-  background-color: #d2d2d2;
-  height: 90px;
-}
+

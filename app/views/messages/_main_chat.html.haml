@@ -1,4 +1,13 @@
 .chat-main
-  .header-main
+  .main-header
+    .main-header__left-bok
+      %h2.main-header__left-bok__current-group
+        グループ
+      %ul.main-header__left-bok__menber-lis
+        Menber：
+        %li.main-header__left-bok__menber-list__menber
+        masa
+    =link_to "#", class: "main-header__edit-btn" do
+      Edit
   .messages
   .form
