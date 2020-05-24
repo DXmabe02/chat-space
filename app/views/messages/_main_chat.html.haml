@@ -2,12 +2,20 @@
   .main-header
     .main-header__left-bok
       %h2.main-header__left-bok__current-group
-        グループ
+        グループ名
       %ul.main-header__left-bok__menber-lis
         Menber：
         %li.main-header__left-bok__menber-list__menber
-        masa
+        test
     =link_to "#", class: "main-header__edit-btn" do
       Edit
   .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talk
+          test
+        %p.message__upper-info__date
+          2020/5/24(Sun) 08:00:00
+      %p.message__text
+        おはよう！！
   .form
