@@ -1,4 +1,5 @@
 .chat-main
+
   .main-header
     .main-header__left-bok
       %h2.main-header__left-bok__current-group
@@ -9,6 +10,7 @@
         test
     = link_to "#", class: "main-header__edit-btn" do
       Edit
+
   .messages
     .message
       .message__upper-info
@@ -18,6 +20,15 @@
           2020/5/24(Sun) 08:00:00
       %p.message__text
         おはよう！！
+    .message
+      .message__upper-info
+        %p.message__upper-info__talk
+          test2
+        %p.message__upper-info__date
+          2020/5/24(Sun) 10:00:00
+      %p.message__text
+        こんにちは！！
+
   .form
     %form.new_message
       .input-box
