@@ -1,10 +1,13 @@
 @import "reset";
 @import "config/colors.scss";
+@import "modules/user";
+@import "modules/flash";
 @import "modules/messages";
 @import "modules/side_bar";
 @import "modules/main_chat";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 
 .wrapper{
   display: flex;
