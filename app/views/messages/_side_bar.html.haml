@@ -1,0 +1,26 @@
+.side-bar
+  .header-left
+    .header-left__box
+      %p.header-left__box__name
+        test
+      %ul.header-left__box__icom
+        %li.header-left__box__icom__group
+          =link_to "#" do
+            =icon('fas', 'edit')
+        %li.header-left__box__icom__account
+          =link_to "#" do
+            =icon('fas', 'cog')
+
+  .groups
+    =link_to "#" do
+      .group
+        %p.group__name
+          test
+        %p.group__message
+          まだメッセージはありません
+    =link_to "#" do
+      .group
+        %p.group__name
+          test2
+        %p.group__message
+          まだメッセージはありません
