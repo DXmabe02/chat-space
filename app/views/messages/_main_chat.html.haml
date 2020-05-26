@@ -3,15 +3,17 @@
   .main-header
     .main-header__left-bok
       %h2.main-header__left-bok__current-group
-        グループ名
+        = @group.name
       %ul.main-header__left-bok__menber-lis
         Menber：
         %li.main-header__left-bok__menber-list__menber
-        test
-    = link_to "#", class: "main-header__edit-btn" do
+          -@group.group_users.each do |group_user| 
+            = group_user.user.name
+    = link_to edit_group_path(params[:group_id]), class: "main-header__edit-btn" do
       Edit
 
   .messages
+    = render @messages
     .message
       .message__upper-info
         %p.message__upper-info__talk
@@ -30,10 +32,20 @@
         こんにちは！！
 
   .form
-    %form.new_message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+    .new_message
+      = form_for [@group, @message] do |f|
+        .input-box
+          = f.text_field :content, class: "input-box__text", placeholder: 'type a message'
+          = f.label :image, class: "input-box__image" do
+            = icon('fas', 'image',class: 'icon')
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class: 'submit-btn'
+
+  -# .form
+    -# %form.new_message
+      -# .input-box
+        -# %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        -# %label{class: "input-box__image"}
+          -# = icon('fas', 'image')
+          -# %input{type: "file", class: "input-box__image__file"}
+      -# %input{type: "submit", class: "submit-btn"}
