@@ -3,11 +3,12 @@
   .main-header
     .main-header__left-bok
       %h2.main-header__left-bok__current-group
-        グループ名
+        = @group.name
       %ul.main-header__left-bok__menber-lis
         Menber：
         %li.main-header__left-bok__menber-list__menber
-        test
+          -@group.group_users.each do |group_user| 
+            = group_user.user.name
     = link_to "#", class: "main-header__edit-btn" do
       Edit
 
