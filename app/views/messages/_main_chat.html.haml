@@ -9,7 +9,7 @@
         %li.main-header__left-bok__menber-list__menber
           -@group.group_users.each do |group_user| 
             = group_user.user.name
-    = link_to "#", class: "main-header__edit-btn" do
+    = link_to edit_group_path(params[:group_id]), class: "main-header__edit-btn" do
       Edit
 
   .messages
